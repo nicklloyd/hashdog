@@ -1,0 +1,69 @@
+{
+  "name": "hashdog",
+  "version": "1.0.0",
+  "description": "Service to monitor changes to latest commit hashes from targeted git repos",
+  "scripts": {
+    "build": "sls webpack",
+    "deploy:env": "sls deploy --stage $NODE_ENV",
+    "deploy": "export NODE_ENV=dev && yarn deploy:env",
+    "deploy:production": "export NODE_ENV=production && npm run deploy:env",
+    "deploy:staging": "export NODE_ENV=staging && npm run deploy:env",
+    "lint": "eslint src --ext ts,js --no-ignore --fix",
+    "serve": "sls offline -P 4000",
+    "serve:watch": "nodemon -e js,ts,jsx,tsx -x npm run serve",
+    "test": "jest --runInBand --detectOpenHandles --colors --verbose --reporters=default",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicklloyd/hashdog.git"
+  },
+  "keywords": [],
+  "author": "Nick Lloyd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicklloyd/hashdog/issues"
+  },
+  "homepage": "https://github.com/nicklloyd/hashdog#readme",
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.61",
+    "@types/node": "^14.6.0",
+    "apollo-server-lambda": "^2.16.1",
+    "dotenv-safe": "^8.2.0",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.10",
+    "@types/supertest": "^2.0.10",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "apollo-server": "^2.17.0",
+    "apollo-server-testing": "^2.17.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.3.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "graphql-tools": "^6.0.18",
+    "jest": "^26.4.2",
+    "prettier": "^2.0.5",
+    "serverless": "^1.79.0",
+    "serverless-dotenv-plugin": "^3.0.0",
+    "serverless-offline": "^6.5.0",
+    "serverless-prune-plugin": "^1.4.3",
+    "serverless-webpack": "^5.3.3",
+    "ts-jest": "^26.2.0",
+    "ts-loader": "^8.0.2",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.1"
+  }
+}

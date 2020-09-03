@@ -1,2 +1,3 @@
-# hashdog
-Service to monitor changes to latest commit hashes from targeted git repos
+## hashdog
+
+Playground for sorting out decent workflow serverless graphql, apollo server, typescript, type-graphql, jest, babel, webpack
