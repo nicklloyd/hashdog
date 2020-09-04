@@ -35,6 +35,7 @@ custom:
     number: 5 # Number of versions to keep
   serverless-offline:
     allowCache: true
+    httpsProtocol: ./local-certs
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
