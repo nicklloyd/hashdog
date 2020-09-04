@@ -30,9 +30,11 @@ plugins:
   - serverless-prune-plugin
   - serverless-offline
 custom:
-  webpack:
-    webpackConfig: ./webpack.config.js
-    includeModules: true
   prune:
     automatic: true
     number: 5 # Number of versions to keep
+  serverless-offline:
+    allowCache: true
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
