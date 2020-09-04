@@ -1,5 +1,5 @@
 import gql from 'graphql-tag'
-import testServer from '../utils/testServer'
+import testServer from '../../utils/testServer'
 
 describe('PingResolver', () => {
   it('answers with Pong!', async () => {
