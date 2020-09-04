@@ -25,5 +25,6 @@ openssl req \
 -days 3650
 ```
 
-Afterwards, import cert.pem to your local keychain and enure it's 'Trust Settings' are set to "Always Trust".
+Afterwards, import cert.pem to your local keychain and ensure it's 'Trust Settings' are set to "Always Trust".
+
 Close out keychain, restart browser, profit.
